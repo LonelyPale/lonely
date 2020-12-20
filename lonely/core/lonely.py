@@ -25,6 +25,9 @@ def access(path=None):
         sys.exit(1)
 
 class Lonely(object):
+    def version(self):
+        print("lonely version 0.0.1")
+
     def install(self, app_name):
         app = apps.get(app_name)
         if app != None and hasattr(app, "install"):
