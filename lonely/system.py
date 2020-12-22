@@ -81,7 +81,7 @@ def env_add(conf):
         
     _os.remove(env_file_path)
     _os.rename(temp_file, env_file_path)
-    command("source %s" % env_file_path)
+    # source() #todo: 无效的，子进程内 source，不会作用于父进程。
     return True
 
 # todo: 优化空行间隔
@@ -114,5 +114,5 @@ def env_del(conf):
         
     _os.remove(env_file_path)
     _os.rename(temp_file, env_file_path)
-    command("source %s" % env_file_path)
+    # source() #todo: 无效的，子进程内 source，不会作用于父进程。
     return True

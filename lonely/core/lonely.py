@@ -26,7 +26,7 @@ def access(path=None):
 
 class Lonely(object):
     def version(self):
-        print("lonely version 0.0.1")
+        print("lonely version 0.0.4")
 
     def install(self, app_name):
         app = apps.get(app_name)

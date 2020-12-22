@@ -20,7 +20,7 @@ def command(*args, exit_code=False, print_out=True, print_err=True, **kwargs):
     if 'encoding' not in kwargs:
         kwargs['encoding'] = 'utf-8'
 
-    ret = subprocess.run(*args, **kwargs)
+    ret = subprocess.run(*args, executable="/bin/bash", **kwargs)
     
     if print_out and ret.stdout is not None and len(ret.stdout) > 0:
         print(ret.stdout)
