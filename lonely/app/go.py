@@ -48,7 +48,11 @@ class Go(object):
         self.env_add()
     
     def update(self):
-        self.remove()
+        self.check()
+        lonely.access()
+        if not os.path.exists(self.home):
+            print("Directory does not exist:1 %s" % self.home)
+        shutil.rmtree(self.home, ignore_errors=True)
         self.install()
 
     def remove(self):
@@ -56,8 +60,7 @@ class Go(object):
         lonely.access()
         if not os.path.exists(self.home):
             print("Directory does not exist: %s" % self.home)
-            sys.exit(1)
-        shutil.rmtree(self.home)
+        shutil.rmtree(self.home, ignore_errors=True)
         self.env_del()
         
     def env_add(self):
