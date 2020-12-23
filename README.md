@@ -24,6 +24,16 @@ python3 -m lonely version
 https://pypi.org/project/lonely
 ```
 
+```
+pip3 install lonely
+/Users/wyb/Library/Python/3.7/lib/python/site-packages
+/Users/wyb/Library/Python/3.7/bin/lone
+
+sudo pip3 install lonely --prefix=/usr/local/bin
+/Library/Python/3.7/site-packages/
+/usr/local/bin/lone
+```
+
 ## TODO
 1、web install shell script
 2、
